@@ -1,8 +1,8 @@
-const siteUrl = 'http://site-url.com'
+const siteUrl = 'http://305media.tv'
 module.exports = {
   siteMetadata: {
-    title: `Tu Proyecto`,
-    description: `Descripción de tu proyecto.`,
+    title: `305 Media TV`,
+    description: `Plataforma Digital de Comunicación e  Interacción de Habla Hispana.`,
     author: `@moitorrijos`,
   },
   plugins: [
