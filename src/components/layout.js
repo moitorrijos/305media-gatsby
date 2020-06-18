@@ -8,10 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import "../styles/_reset.sass"
-import '../styles/_layout.sass'
-
 import Header from "./header"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,22 +25,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="main-container">
-        <main>{children}</main>
-        <footer>
-          Todos los derechos reservados © {new Date().getFullYear()}. Diseñado y
-          Desarrollado por
-          {` `}
-          <a
-            href="https://moitorrijos.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            Moi Torrijos.
-          </a>
-        </footer>
-      </div>
+      <main>{children}</main>
+      <Footer />
     </>
   )
 }

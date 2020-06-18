@@ -1,10 +1,113 @@
-@import 'colors'
-
 header
-  padding: .75rem 1rem
-  background: $primary-color
+  background-color: transparentize($background-color, 0.25)
   color: white
+  font-family: $body-font-family
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  align-items: center
+  box-shadow: 0 3px 6px transparentize($background-color, 0.5)
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  font-size: 0.9rem
+  z-index: 3
 
+.logo
+  max-width: 142px
+  margin: 0.5rem 2rem
+  img
+    box-shadow: 0 2px 4px transparentize($background-color, 0.35)
+
+.navigation
+  align-self: stretch
+  display: flex
+  align-items: stretch
+  justify-content: center
+  transition: all 0.25s ease-in-out
+
+  @media screen and (max-width: 1100px)
+    display: block
+    flex-flow: column nowrap
+    background-color: $background-color
+    width: 100%
+    font-size: 1.2rem
+    position: absolute
+    top: 100%
+    opacity: 0
+    pointer-events: none
+    transform: translateX(100%)
+
+    &.show-nav
+      opacity: 1
+      pointer-events: initial
+      transform: translateX(0)
+
+    &.hide-nav
+      opacity: 0
+      pointer-events: none
   a
     color: white
     text-decoration: none
+    transition: all 0.25s ease-in-out
+    display: flex
+    align-items: center
+    text-transform: uppercase
+    color: $font-color
+    padding: 2rem
+    transition: all 0.25s ease-in-out
+
+    &.current-page, &:hover
+      background-color: transparentize($font-color, 0.25)
+      color: $background-color
+
+    &.secondary-nav-button
+      background-color: transparentize(darken($primary-color, 15%), 0.25)
+
+      &:hover
+        background-color: $primary-color
+
+    &.primary-nav-button
+      background-color: $secondary-color
+
+      &:hover
+        background-color: transparentize(darken($secondary-color, 5%), 0.25)
+        color: $font-color
+
+    @media screen and (max-width: 1100px)
+      padding: 4rem
+
+    @media screen and (max-width: 1321px)
+      padding: 1rem
+
+button.menu-toggle
+  display: none
+  background-color: transparent
+  border: none
+  appearance: none
+  margin-right: 2rem
+
+  @media screen and (max-width: 1100px)
+    display: flex
+    flex-flow: column nowrap
+    height: 36px
+    justify-content: space-between
+
+  span
+    width: 36px
+    height: 4px
+    border-radius: 4px
+    background-color: $font-color
+    transform-origin: 0 0
+    transition: all 0.25s ease-in-out
+
+  &.close
+    span:first-child
+      transform: rotate(45deg) translate(7px, -4px)
+
+    span:nth-child(2)
+      opacity: 0
+
+    span:last-child
+      transform: rotate(-45deg) translate(5px, 1px)

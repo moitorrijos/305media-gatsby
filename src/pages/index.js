@@ -1,9 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Hero from "../components/hero"
+import MediaButton from "../components/media-button"
 
 const IndexPage = () => (
   <Layout>
@@ -12,13 +11,14 @@ const IndexPage = () => (
       description="Plataforma de Video Conferencias"
       lang="es"
     />
-    <h1>Hola Todos</h1>
-    <p>Bienvenidos al Starter de Moi.</p>
-    <p>Vamos a construir algo increíble.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <Hero />
+    <div className="main-container">
+      <div className="inner-container">
+        <h2>Somos la Plataforma de Contenido Digital Número 1 de la Florida</h2>
+        <MediaButton />
+      </div>
+
     </div>
-    <Link to="/page-2/">Vamos a la página 2</Link>
   </Layout>
 )
 
