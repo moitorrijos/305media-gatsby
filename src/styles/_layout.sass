@@ -12,9 +12,25 @@ body
 h1, h2, h3, h4
   font-family: $header-font-family
   max-width: 60ch
+  margin: 2rem 0
+
+h1
+  font-size: 2.5rem
+
+h2
+  font-size: 2.2rem
+
+h3
+  font-size: 2rem
+  font-family: $body-font-family
+
+h4
+  font-size: 1.8rem
+  font-family: $body-font-family
 
 p
   max-width: 60ch
+  font-size: 1.4rem
 
 a
   color: $secondary-color
@@ -24,3 +40,12 @@ a
 
 .media-button
   @include cool-button($secondary-color, $font-color)
+
+.inner-button
+  @include cool-button($secondary-background-color, $font-color)
+
+.header-container
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  gap: 20px
+
