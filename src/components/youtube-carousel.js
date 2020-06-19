@@ -25,9 +25,9 @@ const YoutubeCarousel = () => {
     }
   `)
   return (
-    <div className="youtube-carousel">
+    <div className="carousel">
       {data.allFile.edges.map((image) => (
-        <div className="youtube-item">
+        <div className="item">
           <Img fluid={image.node.childImageSharp.fluid} alt={image.node.name} />
         </div>
       ))}

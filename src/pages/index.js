@@ -13,29 +13,27 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Inicio" description="Plataforma de Video Conferencias" />
     <Hero />
-    <div className="main-container">
-      <div className="header-container">
-        <div className="slogan">
-          <p>Somos la Plataforma de Contenido Digital Número 1 de la Florida</p>
-        </div>
-        <MediaButton />
-        <InnerButton linkTo="/en-vivo">Mira nuestra señal en vivo</InnerButton>
+    <div className="header-container">
+      <div className="slogan">
+        <p>Somos la Plataforma de Contenido Digital Número 1 de la Florida</p>
       </div>
-      <div className="youtube-feed">
-        <h2 className="centered">
-          Nuestro Canal de YouTube
-          <YoutubeLogo style={{ height: "1.5rem", marginLeft: "1rem" }} />
-        </h2>
-        <YoutubeCarousel />
-      </div>
-      <div className="instagram-feed">
-        <h2 className="centered">
-          Síguenos en Instagram
-          <InstagramIcon style={{ height: "1.5rem", marginLeft: "1rem" }} />
-        </h2>
-        <InstagramCarousel />
-      </div>
+      <MediaButton />
+      <InnerButton linkTo="/en-vivo">Mira nuestra señal en vivo</InnerButton>
     </div>
+    <div className="youtube-feed">
+      <h2 className="centered">
+        Nuestro Canal de YouTube
+        <YoutubeLogo style={{ height: "1.5rem", marginLeft: "1rem" }} />
+      </h2>
+    </div>
+    <YoutubeCarousel />
+    <div className="instagram-feed">
+      <h2 className="centered">
+        Síguenos en Instagram
+        <InstagramIcon style={{ height: "1.5rem", marginLeft: "1rem" }} />
+      </h2>
+    </div>
+    <InstagramCarousel />
   </Layout>
 )
 

@@ -99,6 +99,7 @@ em
   @include cool-button($secondary-background-color, $font-color)
 
 .header-container
+  @extend .main-container
   display: grid
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
   gap: 20px
@@ -132,6 +133,9 @@ em
     max-width: 300px
     line-height: 1
     font-size: 3.5rem
+
+    @media (max-width: 414px)
+      font-size: 3rem
 
 .centered
   margin: 4rem auto

@@ -25,9 +25,9 @@ const InstagramCarousel = () => {
     }
   `)
   return (
-    <div className="instagram-carousel">
+    <div className="carousel">
       {data.allFile.edges.map((image) => (
-        <div className="insta-item">
+        <div className="item insta-item">
           <Img fluid={image.node.childImageSharp.fluid} alt={image.node.name} />
         </div>
       ))}

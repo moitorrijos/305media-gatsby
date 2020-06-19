@@ -45,7 +45,7 @@ const NuestrosTalentos = () => {
       </h2>
       <div className="carousel">
         {data.allFile.edges.map((image) => (
-          <div className="item">
+          <div className="item talentos-item">
             <Img
               fluid={image.node.childImageSharp.fluid}
               alt={image.node.name.replace(/-/g, " ")}
