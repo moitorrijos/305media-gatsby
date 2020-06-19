@@ -28,10 +28,10 @@ const Header = () => {
         <Link to="/contactanos" activeClassName="current-page">
           Contáctanos
         </Link>
-        <Link to="/en-vivo" className="secondary-nav-button">
+        <Link to="/#0" className="secondary-nav-button">
           Señal en Vivo
         </Link>
-        <Link to="/on-demand" className="primary-nav-button">
+        <Link to="/#0∫" className="primary-nav-button">
           305 Media On Demand
         </Link>
       </div>

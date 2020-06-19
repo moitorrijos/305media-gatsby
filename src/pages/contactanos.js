@@ -29,7 +29,7 @@ const ContactUs = () => {
             <br />
             3553NW 79AVE. MIAMI, FL. 33122
             <br />
-            Phone: <a href="tel:(305) 200-3322">(305) 200-3322</a>
+            Phone: <a href="tel:+1 (305) 200-3322">+1 (305) 200-3322</a>
           </p>
           <p>
             PROGRAMACIÓN
