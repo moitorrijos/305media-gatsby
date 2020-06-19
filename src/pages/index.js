@@ -10,7 +10,6 @@ const IndexPage = () => (
     <SEO
       title="Inicio"
       description="Plataforma de Video Conferencias"
-      lang="es"
     />
     <Hero />
     <div className="main-container">

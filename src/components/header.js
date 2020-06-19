@@ -16,7 +16,7 @@ const Header = () => {
         <Link to="/" activeClassName="current-page">
           Inicio
         </Link>
-        <Link to="quienes-somos" activeClassName="current-page">
+        <Link to="/quienes-somos" activeClassName="current-page">
           Quiénes Somos
         </Link>
         <Link to="/nuestros-talentos" activeClassName="current-page">
