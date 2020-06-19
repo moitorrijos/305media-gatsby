@@ -10,7 +10,7 @@ const Footer = () => (
   <>
     <div className="apps-downloads">
       <p>
-        Descarga Nuestras Aplicaciones para Disfrutar de nuestro contenido On the Go
+        Descarga Nuestras Aplicaciones para Disfrutar de Nuestro Contenido On the Go
       </p>
       <div className="app-buttons">
         <a
