@@ -6,37 +6,89 @@ body
   position: relative
   overflow-x: hidden
 
-  @media screen and (max-width: 620px)
+  @media (max-width: 620px)
     font-size: 14px
 
 h1, h2, h3, h4
   font-family: $header-font-family
   max-width: 60ch
   margin: 2rem 0
+  line-height: 1
 
 h1
   font-size: 2.5rem
 
 h2
-  font-size: 2.2rem
+  font-size: 1.8rem
 
 h3
-  font-size: 2rem
-  font-family: $body-font-family
+  font-size: 1.6rem
 
 h4
-  font-size: 1.8rem
-  font-family: $body-font-family
+  font-size: 1.4rem
 
 p
   max-width: 60ch
-  font-size: 1.4rem
-
+  margin: 1.5rem 0
 a
   color: $secondary-color
 
+em
+  color: $terciary-color
+
 .main-container
   padding: 4rem 10%
+
+.about-us
+  padding-bottom: 0
+
+.main-grid
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 40px
+
+  .player
+    place-self: center
+
+  img
+    width: 100%
+
+  @media (max-width: 880px)
+    & > *
+      grid-column: 1 / 3
+
+    .order-1
+      order: 1
+
+    .order-2
+      order: 2
+
+    .order-3
+      order: 3
+
+    .order-4
+      order: 4
+
+.secondary-grid
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+  column-gap: 10px
+  row-gap: 40px
+
+.services
+  .service
+    display: flex
+    flex-flow: column nowrap
+    justify-content: space-between
+
+    h4
+      text-align: center
+      text-transform: uppercase
+    a
+      font-size: 1rem
+      padding: 0.5rem
+      align-self: center
+      width: 180px
 
 .media-button
   @include cool-button($secondary-color, $font-color)
@@ -48,12 +100,43 @@ a
   display: grid
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
   gap: 20px
+  
+  &:last-child
+    margin-right: 0
+
+  a
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+
+.slogan p
+  font-size: 1.4rem
+  margin: 0
+  max-width: 300px
 
 .page-header
   padding: 10rem 10%
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+
+  @media (max-width: 620px)
+    background-position: 40% center
 
   h1
     text-transform: uppercase
     text-shadow: 0 3px 9px transparentize($background-color, 0.25)
     max-width: 300px
     line-height: 1
+    font-size: 3.5rem
+
+.centered
+  max-width: 700px
+  margin: 4rem auto 0
+  text-align: center
+  
+  @media (max-width: 700px)
+    padding: 0 10%
+.page-slogan
+  font-family: $body-font-family

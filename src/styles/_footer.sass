@@ -5,6 +5,9 @@
   padding: 0 2rem
   line-height: 1
 
+  p
+    font-size: 2rem
+
 .app-buttons
   display: grid
   grid-template-columns: repeat(2, 1fr)
@@ -14,7 +17,7 @@
     display: block
 
 footer
-  padding: 3rem 10%
+  padding: 2rem 10%
   border-top: 2px solid $font-color
   display: flex
   flex-flow: row wrap
@@ -22,19 +25,20 @@ footer
   
   p 
     font-size: 1rem
+    margin: 0
 
-  @media screen and (max-width: 620px)
+  @media (max-width: 620px)
     justify-content: center
 
   .copyright
     padding: 1rem 0
 
-    @media screen and (max-width: 620px)
+    @media (max-width: 620px)
       text-align: center
 
   .social-media
     min-width: 320px
-    padding: 1rem 0
+    padding: 1rem 2rem
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(40px, 1fr))
     gap: 20px

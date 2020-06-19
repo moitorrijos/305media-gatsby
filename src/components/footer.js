@@ -9,9 +9,9 @@ import YoutubeIcon from "../assets/youtube-icon.png"
 const Footer = () => (
   <>
     <div className="apps-downloads">
-      <h3>
-        Descarga Nuestras Aplicaciones para Disfrutar de nuestro contenido
-      </h3>
+      <p>
+        Descarga Nuestras Aplicaciones para Disfrutar de nuestro contenido On the Go
+      </p>
       <div className="app-buttons">
         <a
           href="https://itunes.apple.com/us/app/305-la-radio/id1436584582?l=es&mt=8"
@@ -35,9 +35,7 @@ const Footer = () => (
       <div className="copyright">
         <p>
           305 Broadcast Media Center © {new Date().getFullYear()}. Todos los
-          Derechos Reservados.
-        </p>
-        <p>
+          Derechos Reservados. <br />
           Diseñado y Desarrollado por
           {` `}
           <a
