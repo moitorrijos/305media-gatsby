@@ -31,18 +31,17 @@ header
     display: block
     flex-flow: column nowrap
     background-color: $background-color
-    width: 100%
     font-size: 1.2rem
     position: absolute
     top: 100%
+    left: 0
+    right: 0
     opacity: 0
     pointer-events: none
-    transform: translateX(100%)
 
     &.show-nav
       opacity: 1
       pointer-events: initial
-      transform: translateX(0)
 
     &.hide-nav
       opacity: 0
