@@ -6,8 +6,11 @@
   padding: 1rem 10% 2rem
   display: flex
   flex-flow: row nowrap
-  overflow-x: scroll
+  overflow: hidden
   -webkit-overflow-scrolling: touch
+
+  @media (max-width: 414px)
+    overflow-x: scroll
 
   .item
     width: 80%
