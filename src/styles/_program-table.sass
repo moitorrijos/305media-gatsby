@@ -1,8 +1,12 @@
-.program-table
-  padding: 4rem 10% 2rem
+.program-times-table
+  padding: 4rem 5% 2rem
   display: flex
   flex-flow: row nowrap
   position: relative
+
+.program-table
+  overflow-x: scroll
+  width: 100%
   
 ul.times
   background-color: $font-color
@@ -11,26 +15,33 @@ ul.times
   text-align: center
   transform: translateY(-18px)
   color: $secondary-background-color
-  max-width: 220px
+  min-width: 120px
+  width: 10%
   box-shadow: 6px 0 12px transparentize($background-color, 0.75)
   position: relative
   z-index: 2
   padding-bottom: 20px
 
-  li
-    padding: 30px 3rem 33px
-
   li.head
     font-family: $header-font-family
     text-transform: uppercase
-    padding: 43px 3rem 20px
+    text-align: center
+    padding: 43px 0 20px
+
+  li
+    font-size: 16px
+    padding: 30px 0 33px
+
 
 table.days
   margin-top: 1rem
   border-collapse: collapse
   flex: 1
+  min-width: 1000px
+  width: 100%
   position: relative
   z-index: 1
+  font-size: 16px
 
   thead th
     padding: 1rem
@@ -41,7 +52,13 @@ table.days
     font-family: $header-font-family
 
   tbody td
-    background-color: $font-color
+    background-color: #ffffff
     padding: 1rem
+    width: 180px
     height: 87px
     border-bottom: 1px solid lighten($secondary-background-color, 60%)
+    text-align: center
+    align-items: center
+
+    img
+      height: 45px

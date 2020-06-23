@@ -1,4 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
+import PrevIcon from "../icons/prev-button.svg"
+import NextIcon from "../icons/next-button.svg"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -13,6 +15,7 @@ const YoutubeCarousel = () => {
       ) {
         edges {
           node {
+            id
             name
             childImageSharp {
               fluid {
@@ -24,13 +27,23 @@ const YoutubeCarousel = () => {
       }
     }
   `)
+  const [ position, setPosition ] = useState(0)
+
   return (
     <div className="carousel">
-      {data.allFile.edges.map((image) => (
-        <div className="item">
-          <Img fluid={image.node.childImageSharp.fluid} alt={image.node.name} />
-        </div>
-      ))}
+      <button className="prev">
+        <PrevIcon />
+      </button>
+      <div className="inner-carousel">
+        {data.allFile.edges.map((image) => (
+          <div className="item" key={image.node.id}>
+            <Img fluid={image.node.childImageSharp.fluid} alt={image.node.name} />
+          </div>
+        ))}
+      </div>
+      <button className="next">
+        <NextIcon />
+      </button>
     </div>
   )
 }
