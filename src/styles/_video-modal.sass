@@ -1,0 +1,65 @@
+.video-modal
+  position: absolute
+  z-index: 5
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: transparentize($background-color, 0.2)
+  transition: all 0.3s ease-in-out
+
+  &.hide
+    opacity: 0
+    transform: translateY(-10px)
+    pointer-events: none
+
+  &.show
+    opacity: 1
+    transform: translateY(0)
+    pointer-events: auto
+
+  .inner-video
+    margin: 10% auto 0
+    width: 70%
+    background-color: $background-color
+    box-shadow: 0 8px 16px transparentize($background-color, 0.6)
+    position: relative
+
+    @media (max-width: 414px)
+      width: 100%
+      margin-top: 40%
+
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+    
+    &:before
+      content: ''
+      display: block
+      padding-bottom: 56.25%
+
+    button.close-button
+      cursor: pointer
+      background-color: transparent
+      appearance: none
+      border: none
+      padding: 0
+      width: 50px
+      height: 50px
+      position: absolute
+      z-index: 7
+      top: -25px
+      right: -25px
+
+      @media (max-width: 414px)
+        top: -40px
+        right: 25px
+
+      &:focus
+        outline: 0
+
+      svg
+        width: 100%

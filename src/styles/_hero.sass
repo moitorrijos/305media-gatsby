@@ -41,24 +41,34 @@
     @media (max-width: 415px)
       font-size: 16vw
 
-  svg
+  button.play-button
     grid-column: 2 / 3
     grid-row: 2 / 3
-    display: block
-    align-self: center
-    justify-self: center
+    display: flex
     width: 120px
     height: 120px
-    opacity: 0.75
     cursor: pointer
-    filter: drop-shadow(0 3px 6px transparentize($background-color, 0.25))
+    background-color: transparent
+    border: none
+    border-radius: 50%
     transition: all 0.25s ease-in-out
-
+    
     &:hover
       transform: scale(1.1)
 
     &:active
       transform: scale(0.95)
+
+    &:focus
+      outline: 0
+    
+    svg
+      display: block
+      align-self: center
+      justify-self: center
+      width: 100%
+      opacity: 0.75
+      filter: drop-shadow(0 3px 6px transparentize($background-color, 0.25))
 
   .media-button
     grid-column: 1 / 1
