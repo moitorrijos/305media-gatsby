@@ -26,7 +26,7 @@ const Carousel = ({ images, directory }) => {
 
   return (
     <div className="carousel">
-      <button className={(position < 1) ? 'hidden' : 'prev'}  onClick={moveLeft}>
+      <button className={(position == 0) ? 'hidden' : 'prev'}  onClick={moveLeft}>
         <PrevIcon />
       </button>
       <div className="inner-carousel" ref={innerRef}>

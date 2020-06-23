@@ -18,6 +18,7 @@ const NuestrosTalentos = () => {
         edges {
           node {
             name
+            relativeDirectory
             childImageSharp {
               fluid {
                 ...GatsbyImageSharpFluid
@@ -28,6 +29,7 @@ const NuestrosTalentos = () => {
       }
     }
   `)
+  const directory = data.allFile.edges[0].node.relativeDirectory
   return (
     <Layout>
       <SEO
@@ -43,7 +45,7 @@ const NuestrosTalentos = () => {
         Entretenimiento, Noticias, Humor, Estilo de Vida, Deportes, Farándula,
         Tecnología y mucho más.
       </h2>
-      <Carousel images={data.allFile.edges} />
+      <Carousel images={data.allFile.edges} directory={directory} />
     </Layout>
   )
 }
