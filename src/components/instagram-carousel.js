@@ -1,8 +1,6 @@
 import React from "react"
-import PrevIcon from "../icons/prev-button.svg"
-import NextIcon from "../icons/next-button.svg"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import Carousel from "./carousel"
 
 const InstagramCarousel = () => {
   const data = useStaticQuery(graphql`
@@ -15,7 +13,7 @@ const InstagramCarousel = () => {
       ) {
         edges {
           node {
-            name
+            relativeDirectory
             id
             childImageSharp {
               fluid(fit: CONTAIN) {
@@ -27,22 +25,10 @@ const InstagramCarousel = () => {
       }
     }
   `)
+  const images = data.allFile.edges
+  const directory = data.allFile.edges[0].node.relativeDirectory
   return (
-    <div className="carousel">
-      <button className="prev">
-        <PrevIcon />
-      </button>
-      <div className="inner-carousel">
-        {data.allFile.edges.map((image) => (
-          <div className="item insta-item" key={image.node.id}>
-            <Img fluid={image.node.childImageSharp.fluid} alt={image.node.name} />
-          </div>
-        ))}
-      </div>
-      <button className="next">
-        <NextIcon />
-      </button>
-    </div>
+    <Carousel images={images} directory={directory} />
   )
 }
 

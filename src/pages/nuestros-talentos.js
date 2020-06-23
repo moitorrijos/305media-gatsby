@@ -3,10 +3,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageHeader from "../components/page-header"
 import BackgroundImage from "../assets/nuestros-talentos-bg.jpg"
-import PrevIcon from "../icons/prev-button.svg"
-import NextIcon from "../icons/next-button.svg"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import Carousel from "../components/carousel"
 
 const NuestrosTalentos = () => {
   const data = useStaticQuery(graphql`
@@ -45,24 +43,7 @@ const NuestrosTalentos = () => {
         Entretenimiento, Noticias, Humor, Estilo de Vida, Deportes, Farándula,
         Tecnología y mucho más.
       </h2>
-      <div className="carousel">
-        <button className="prev">
-          <PrevIcon />
-        </button>
-        <div className="inner-carousel">
-          {data.allFile.edges.map((image) => (
-            <div className="item talentos-item">
-              <Img
-                fluid={image.node.childImageSharp.fluid}
-                alt={image.node.name.replace(/-/g, " ")}
-              />
-            </div>
-          ))}
-        </div>
-        <button className="next">
-          <NextIcon />
-        </button>
-      </div>
+      <Carousel images={data.allFile.edges} />
     </Layout>
   )
 }

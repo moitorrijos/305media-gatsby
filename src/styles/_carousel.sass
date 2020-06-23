@@ -15,8 +15,18 @@
     appearance: none
     top: 0
     bottom: 0
+    opacity: 1
     cursor: pointer
     transition: all 0.25s ease-in-out
+
+    &.hidden
+      opacity: 0
+
+    svg
+      width: 40px
+
+      path
+        stroke-width: 7
 
     &:focus
       outline: 0
@@ -48,9 +58,28 @@
       max-width: 500px
       flex: 0 0 auto
       margin-right: 20px
+      transition: all 0.25s ease-in-out
 
       &:last-child
         margin-right: 0
+
+      &.instagram
+        width: 270px
+        height: 220px
+        overflow: hidden
+        flex: 0 0 auto
+        margin-right: 20px
+        cursor: pointer
+        transition: all 0.25s ease-in-out
+
+        img
+          height: 100%
+
+        &:hover
+          transform: scale(1.02)
+
+        &:last-child
+          margin-right: 0
 
     .talentos-item
       cursor: pointer
@@ -62,20 +91,4 @@
       &:last-child
         margin-right: 0
 
-    .insta-item
-      width: 270px
-      height: 220px
-      overflow: hidden
-      flex: 0 0 auto
-      margin-right: 20px
-      cursor: pointer
-      transition: all 0.25s ease-in-out
-
-      img
-        height: 100%
-
-      &:hover
-        transform: scale(1.02)
-
-      &:last-child
-        margin-right: 0
+      
