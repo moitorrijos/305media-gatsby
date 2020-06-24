@@ -7,7 +7,7 @@ const SpotifyTuner = () => (
     width="100%"
     height={232}
     frameBorder={0}
-    allowTransparency="true"
+    allowtransparency="true"
     allow="encrypted-media"
   />
 )
