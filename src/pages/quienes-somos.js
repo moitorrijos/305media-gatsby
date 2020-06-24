@@ -1,22 +1,33 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageHeader from "../components/page-header.js"
 import QuienesSomos from "../assets/quienes-somos-bg.jpg"
 import Video1 from "../assets/video-1.jpg"
+import SmallPlayButton from "../icons/small-play-button.svg"
 import Video2 from "../assets/video-2.jpg"
 import Service1 from "../assets/crea-tu-canal.jpg"
 import Service2 from "../assets/305-podcast.jpg"
 import Service3 from "../assets/305-academy.jpg"
 import Service4 from "../assets/305-online-broacast.jpg"
 import InnerButton from "../components/inner-button"
+import VideoModal from "../components/video-modal"
 
 const AboutPage = () => {
+  const [videoUrl, setVideoUrl] = useState('')
+  const [show, setShow] = useState(false)
+
   return (
     <Layout>
       <SEO
         title="Quiénes Somos"
         description="Somos la Plataforma No. 1 de la Florida"
+      />
+      <VideoModal
+        src={videoUrl}
+        title="305 Broadcast"
+        show={show}
+        setShow={setShow}
       />
       <PageHeader
         backgroundImage={QuienesSomos}
@@ -44,10 +55,19 @@ const AboutPage = () => {
           </p>
         </div>
         <div className="player order-2">
-          <img
-            src={Video2}
-            alt="Video promocional de 305 Broadcast Media Center"
-          />
+          <button
+            className="small-play-button"
+            onClick={() => {
+              setVideoUrl('https://www.youtube.com/embed/ys_65XCOK9Q')
+              setShow(!show) 
+            }}
+          >
+            <SmallPlayButton />
+            <img
+              src={Video2}
+              alt="Video promocional de 305 Broadcast Media Center"
+            />
+          </button>
         </div>
         <div className="player order-4">
           <img

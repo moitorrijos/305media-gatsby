@@ -92,6 +92,28 @@ em
       align-self: center
       width: 180px
 
+button
+  padding: 0
+  border: none
+  appearance: none
+  cursor: pointer
+  background-color: transparent
+
+  &:focus
+    outline: 0
+
+  &.small-play-button
+    box-shadow: 0 2px 4px transparentize($background-color, 0.25)
+    position: relative
+
+    svg
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0.5
+      filter: drop-shadow(0 3px 6px transparentize($background-color, 0.15))
+
 .media-button
   @include cool-button($secondary-color, $font-color)
 
@@ -148,3 +170,18 @@ em
   
   @media (max-width: 900px)
     padding: 0 10%
+
+.live-video
+  padding-top: 20vh
+
+.live-video-player
+  position: relative
+  padding-bottom: 56.25%
+  height: 0
+
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%

@@ -9,8 +9,7 @@ const Carousel = ({ images, directory }) => {
   let imageRef = useRef(null)
   const displacement = innerRef.current ? innerRef.current.offsetWidth : 0
   const imageWidth = imageRef.current ? imageRef.current.offsetWidth : 0
-  const imageLength = ((imageWidth * images.length) / imageWidth)/2
-  console.log(imageLength)
+  const imageLength = ((imageWidth * images.length) / imageWidth)/1.5
   const moveRight = () => {
     setPosition((position += 1))
     if (position > imageLength) {
