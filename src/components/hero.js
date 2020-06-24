@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import PlayButton from "../icons/play-button.svg"
 import MediaButton from "./media-button"
 import VideoModal from "./video-modal"
+import DownArrow from "../icons/down-arrow.svg"
 
 const Hero = () => {
   const [show, setShow] = useState(false)
@@ -26,6 +27,7 @@ const Hero = () => {
         >
           <PlayButton />
         </button>
+        <DownArrow className="down-arrow" />
       </div>
     </>
   )

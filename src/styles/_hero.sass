@@ -1,5 +1,5 @@
 .hero
-  background-image: url("../assets/305-media-hero-image.jpg")
+  background-image: url("../assets/305-media-hero-image2.jpg")
   background-repeat: no-repeat
   background-position: center top
   background-size: cover
@@ -58,7 +58,7 @@
       justify-self: center
       width: 100%
       opacity: 0.75
-      filter: drop-shadow(0 3px 6px transparentize($background-color, 0.15))
+      filter: drop-shadow(0 3px 6px transparentize($background-color, 0.75))
 
     &:hover
       transform: scale(1.05)
@@ -82,3 +82,13 @@
     @media (max-width: 620px)
       font-size: 1rem
       justify-self: center
+
+.down-arrow
+  grid-column: 2 / 3
+  grid-row: 3 / 4
+  width: 100%
+  filter: drop-shadow(0 3px 12px transparentize($background-color, 0.25))
+  align-self: end
+
+  @media (max-width: 620px)
+    display: none
