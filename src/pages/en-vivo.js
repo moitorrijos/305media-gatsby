@@ -11,8 +11,9 @@ const EnVivo = () => (
     <div className="main-container live-video">
       <div className="live-video-player">
         <iframe
-          allowfullscreen=""
-          class="iframe_streaming"
+          allowFullScreen
+          title="Señal en vivo 305Media.tv"
+          className="iframe_streaming"
           frameBorder="0"
           scrolling="no"
           src="https://iframe.dacast.com/b/160248/c/541107"
