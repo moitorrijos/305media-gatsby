@@ -29,7 +29,13 @@ const Hero = () => {
         >
           <PlayButton />
         </button> */}
-        <DownArrow className="down-arrow" />
+        <a
+          href="#main-slogan"
+          aria-label="Go Down"
+          className="down-arrow"
+        >
+          <DownArrow />
+        </a>
       </div>
     </>
   )
