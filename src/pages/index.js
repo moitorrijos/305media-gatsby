@@ -16,7 +16,7 @@ const IndexPage = () => (
     <SEO title="Inicio" description="Plataforma de Video Conferencias" />
     <Hero />
     <div className="header-container">
-      <div className="slogan">
+      <div id="main-slogan" className="slogan">
         <p>Somos la Plataforma de Contenido Digital Número 1 de la Florida</p>
       </div>
       <MediaButton />
