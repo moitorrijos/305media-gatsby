@@ -58,7 +58,7 @@ const AboutPage = () => {
           <button
             className="small-play-button"
             onClick={() => {
-              setVideoUrl('https://www.youtube.com/embed/ys_65XCOK9Q')
+              setVideoUrl('https://www.youtube.com/embed/sRFdqk4iDV8')
               setShow(!show) 
             }}
           >
@@ -70,10 +70,19 @@ const AboutPage = () => {
           </button>
         </div>
         <div className="player order-4">
-          <img
-            src={Video1}
-            alt="Video promocional de 305 Broadcast Media Center"
-          />
+          <button
+              className="small-play-button"
+              onClick={() => {
+                setVideoUrl('https://www.youtube.com/embed/ys_65XCOK9Q')
+                setShow(!show) 
+              }}
+            >
+              <SmallPlayButton />
+            <img
+              src={Video1}
+              alt="Video promocional de 305 Broadcast Media Center"
+            />
+          </button>
         </div>
         <div className="content order-3">
           <h3>305 BROADCAST MEDIA CENTER</h3>
