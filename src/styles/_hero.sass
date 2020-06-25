@@ -1,5 +1,4 @@
 .hero
-  // background-image: url("../assets/305-media-hero-image2.jpg")
   background-color: transparentize($background-color, 0.5)
   background-repeat: no-repeat
   background-position: center top
@@ -12,6 +11,15 @@
   gap: 20px
   position: relative
   overflow: hidden
+
+  @media (max-width: 1000px)
+    background-position: 33% top
+
+  @media (max-width: 620px)
+    grid-template-columns: 1fr
+    background-position: 40% top
+    background-image: url("../assets/305-media-hero-image2.jpg")
+
 
   .background-video
     position: absolute
@@ -36,12 +44,8 @@
       height: auto
       background-color: transparentize($background-color, 0.5)
 
-  @media (max-width: 1000px)
-    background-position: 33% top
-
-  @media (max-width: 620px)
-    grid-template-columns: 1fr
-    background-position: 40% top
+    @media (max-width: 620px)
+      display: none
 
   h1
     grid-column: 1 / 2

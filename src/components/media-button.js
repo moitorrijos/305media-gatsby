@@ -2,8 +2,8 @@ import React from "react"
 
 const MediaButton = () => (
   <a
-    href="#0"
-    // target="_blank"
+    href="http://305ondemand.com/es/"
+    target="_blank"
     rel="noopener noreferrer"
     className="media-button"
   >

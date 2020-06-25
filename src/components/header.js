@@ -31,9 +31,14 @@ const Header = () => {
         <Link to="/en-vivo" className="secondary-nav-button">
           Señal en Vivo
         </Link>
-        <Link to="/#0" className="primary-nav-button">
+        <a
+          className="primary-nav-button"
+          href="http://305ondemand.com/es/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           305 Media On Demand
-        </Link>
+        </a>
       </div>
       <button
         onClick={() => {
