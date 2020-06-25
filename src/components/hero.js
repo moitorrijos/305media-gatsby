@@ -3,6 +3,7 @@ import PlayButton from "../icons/play-button.svg"
 import MediaButton from "./media-button"
 import VideoModal from "./video-modal"
 import DownArrow from "../icons/down-arrow.svg"
+import BackgroundVideo from "../components/background-video"
 
 const Hero = () => {
   const [show, setShow] = useState(false)
@@ -15,6 +16,7 @@ const Hero = () => {
         setShow={setShow}
       />
       <div className="hero">
+        <BackgroundVideo />
         <h1>
           Gente que habla como <br /> <strong>tú</strong>
         </h1>
