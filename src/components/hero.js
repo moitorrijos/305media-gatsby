@@ -16,7 +16,9 @@ const Hero = () => {
       /> */}
       <div className="hero">
         <h1>
-          Gente que habla como <br /> <strong>tú</strong>
+          Somos <br />
+          Gente que habla como <br />
+          <strong>tú</strong>
         </h1>
         <MediaButton />
         {/* <button
