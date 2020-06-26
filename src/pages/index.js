@@ -13,7 +13,7 @@ import SpotifyTuner from "../components/spotify-tuner"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Inicio" description="Plataforma de Video Conferencias" />
+    <SEO title="305MediaTV" description="Somos Gente que Habla Como Tú" />
     <Hero />
     <div className="header-container">
       <div id="main-slogan" className="slogan">
