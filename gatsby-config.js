@@ -2,7 +2,7 @@ const siteUrl = 'http://305media.tv'
 module.exports = {
   siteMetadata: {
     title: `305 Media TV`,
-    description: `Plataforma Digital de Comunicación e  Interacción de Habla Hispana.`,
+    description: `305Media.tv. Somos Gente que Habla Como Tú.`,
     author: `@moitorrijos`,
   },
   plugins: [
