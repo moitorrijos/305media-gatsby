@@ -10,18 +10,22 @@
     p
       font-size: 1.4rem
 
-form.contact-form
+.contact-form-message
   width: 100%
   max-width: 900px
-  padding-right: 30px
+  padding-right: 60px
 
   @media (max-width: 900px)
     padding-right: 0
 
+form.contact-form
   label
     display: block
     margin-bottom: 1rem
     font-size: 1.2rem
+
+    &.saludos
+      display: none
 
   small.required
     color: $secondary-color
@@ -51,8 +55,41 @@ form.contact-form
     display: flex
     align-items: center
     margin-top: 2rem
+    transition: all 0.25s ease-in-out
 
     svg
       height: 1rem
-      margin-left: 1rem 
-    
+      margin-left: 1rem
+
+    &.enviando
+      background-color: $background-color
+      border: 1px solid $font-color
+      color: $font-color
+
+      svg 
+        animation: rotation 2s linear infinite
+        width: 1rem
+        height: 1rem
+
+        path
+          fill: $font-color
+
+.mensaje-correo
+  padding: 2rem 3rem
+  margin: 2rem 0
+
+  &.success
+    border: 1px solid $green
+    background-color: darken($green, 10%)
+    color: $font-color
+
+  &.error
+    border: 1px solid $secondary-color
+    background-color: darken($secondary-color, 10%)
+    color: $font-color
+
+@keyframes rotation
+  from
+    transform: rotate(0)
+  to
+    transform: rotate(360deg)
