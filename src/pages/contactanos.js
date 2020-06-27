@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Helmet from "react-helmet"
 import PageHeader from "../components/page-header"
 import BackgroundImage from "../assets/contactanos-mapa-bg.jpg"
 import ContactForm from "../components/contact-form.js"
@@ -8,6 +9,9 @@ import ContactForm from "../components/contact-form.js"
 const ContactUs = () => {
   return (
     <Layout>
+      <Helmet>
+          <body className="contact-page" />
+      </Helmet>
       <SEO
         title="Contáctanos"
         description="Con sede principal en Miami, Florida para el Mundo"
