@@ -28,7 +28,11 @@ const InstagramCarousel = () => {
   const images = data.allFile.edges
   const directory = data.allFile.edges[0].node.relativeDirectory
   return (
-    <Carousel images={images} directory={directory} />
+    <Carousel
+      images={images}
+      directory={directory}
+      socialMediaLink="https://www.instagram.com/305media.tv/"
+    />
   )
 }
 

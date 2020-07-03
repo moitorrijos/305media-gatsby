@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react"
+import PropTypes from 'prop-types'
 import PrevIcon from "../icons/prev-button.svg"
 import NextIcon from "../icons/next-button.svg"
 import Img from "gatsby-image"
 
-const Carousel = ({ images, directory }) => {
+const Carousel = ({ images, directory, socialMediaLink }) => {
   let [position, setPosition] = useState(0)
   let innerRef = useRef(null)
   let imageRef = useRef(null)
@@ -54,6 +55,10 @@ const Carousel = ({ images, directory }) => {
       </button>
     </div>
   )
+}
+
+Carousel.defaultprops = {
+  socialMediaLink: '#0'
 }
 
 export default Carousel
