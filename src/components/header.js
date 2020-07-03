@@ -33,7 +33,7 @@ const Header = () => {
         </Link>
         <a
           className="primary-nav-button"
-          href="http://305ondemand.com/es/"
+          href="http://305ondemand.com/"
           target="_blank"
           rel="noopener noreferrer"
         >

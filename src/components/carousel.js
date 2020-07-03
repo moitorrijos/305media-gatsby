@@ -36,10 +36,16 @@ const Carousel = ({ images, directory }) => {
             style={{ transform: `translateX(${-displacement * position/2}px)` }}
             ref={imageRef}
           >
+            <a
+              href={socialMediaLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
             <Img
               fluid={image.node.childImageSharp.fluid}
               alt={image.node.name}
             />
+            </a>
           </div>
         ))}
       </div>

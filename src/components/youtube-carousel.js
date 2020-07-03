@@ -26,7 +26,10 @@ const YoutubeCarousel = () => {
     }
   `)
   return (
-    <Carousel images={data.allFile.edges} />
+    <Carousel
+      images={data.allFile.edges}
+      socialMediaLink="https://www.youtube.com/channel/UCcohsI2R_G0zjlbGLailRNQ"
+    />
   )
 }
 
