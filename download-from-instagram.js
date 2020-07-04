@@ -34,22 +34,25 @@ const rmDirectory = (dir) => {
   })
 }
 
-const createDirectory = (dir) => {
-  if (!fs.existsSync(dir)){
-    fs.mkdirSync(dir);
-  }
-}
-
 let images
 (async () => {
   try {
     // delete instagram recursively
     const dir = "./src/assets/instagram"
     
-    rmDirectory(dir)
-
-    createDirectory(dir)
-    
+    fs.rmdir(dir, { recursive: true }, (err) => {
+      if (err) {
+          throw err
+      }
+      console.log(`${dir} is deleted!`);
+      fs.mkdir(dir, { recursive: true }, (err) => {
+        if (err) {
+          throw err
+        }
+        console.log(`${dir} is recreated!`)
+        
+      })
+    })
     images = await fetchInstagramPhotos('https://www.instagram.com/305media.tv/')
     images.forEach((image, index) => {
       download(image.thumbnailUrl, `${dir}/305-media-tv-instagram-${index + 1}.jpg`, () => {
@@ -60,4 +63,6 @@ let images
     console.error('Fetching Instagram photos failed', e)
   }
   console.log('Done ✅.')
+
+    
 })()
