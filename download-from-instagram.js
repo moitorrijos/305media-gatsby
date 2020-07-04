@@ -51,7 +51,6 @@ let images
     createDirectory(dir)
     
     images = await fetchInstagramPhotos('https://www.instagram.com/305media.tv/')
-    console.log(images)
     images.forEach((image, index) => {
       download(image.thumbnailUrl, `${dir}/305-media-tv-instagram-${index + 1}.jpg`, () => {
         console.log(`File ${index + 1} added succesfully ✅`)
@@ -60,4 +59,5 @@ let images
   } catch (e) {
     console.error('Fetching Instagram photos failed', e)
   }
+  console.log('Done ✅.')
 })()
