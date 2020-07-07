@@ -17,6 +17,7 @@ const NuestrosTalentos = () => {
       ) {
         edges {
           node {
+            id
             name
             relativeDirectory
             childImageSharp {
