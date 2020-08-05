@@ -5,7 +5,8 @@ const axios = require('axios')
 const instagramRegExp = new RegExp(/<script type="text\/javascript">window\._sharedData = (.*);<\/script>/)
 
 const download = (url, path, callback) => {
-  request.head(url, (err, res, body) => {
+  request.head(url, (error) => {
+    if (error) console.log(error)
     request(url)
       .pipe(fs.createWriteStream(path))
       .on('close', callback)
@@ -22,16 +23,6 @@ const fetchInstagramPhotos = async (accountUrl) => {
     }
   })
   return photos
-}
-
-const rmDirectory = (dir) => {
-  fs.rmdir(dir, { recursive: true }, (err) => {
-    if (err) {
-        throw err;
-    }
-
-    console.log(`${dir} is deleted!`);
-  })
 }
 
 let images
@@ -62,7 +53,5 @@ let images
   } catch (e) {
     console.error('Fetching Instagram photos failed', e)
   }
-  console.log('Done ✅.')
-
-    
+  console.log('Done ✅.')    
 })()
