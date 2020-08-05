@@ -53,14 +53,14 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-source-youtube-v2`,
-      options: {
-        channelId: ['UCcohsI2R_G0zjlbGLailRNQ'],
-        apiKey: 'AIzaSyAXLrWcf50P2OgCIfzNnIlWh9g_AMmaBtQ',
-        maxVideos: 10 // Defaults to 50
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-youtube-v2`,
+    //   options: {
+    //     channelId: ['UCcohsI2R_G0zjlbGLailRNQ'],
+    //     apiKey: 'AIzaSyAXLrWcf50P2OgCIfzNnIlWh9g_AMmaBtQ',
+    //     maxVideos: 10 // Defaults to 50
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

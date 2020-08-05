@@ -13,10 +13,10 @@ const YoutubeCarousel = () => {
       ) {
         edges {
           node {
+            relativeDirectory
             id
-            name
             childImageSharp {
-              fluid {
+              fluid(fit: CONTAIN) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -25,10 +25,11 @@ const YoutubeCarousel = () => {
       }
     }
   `)
+  const images = data.allFile.edges
   return (
     <Carousel
-      images={data.allFile.edges}
-      socialMediaLink="https://www.youtube.com/channel/UCcohsI2R_G0zjlbGLailRNQ"
+      images={images}
+      socialMediaLink="https://www.youtube.com/c/305MediaTV/videos"
     />
   )
 }
