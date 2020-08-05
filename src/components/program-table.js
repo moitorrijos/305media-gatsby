@@ -1,23 +1,27 @@
 import React from "react"
-import CualquierCosa from "../assets/programas/cualquier-cosa.png"
-import Agentes305 from "../assets/programas/agentes-305.png"
-import AsignaturaPendiente from "../assets/programas/asignatura-pendiente.png"
 import Backstage from "../assets/programas/backstage.png"
 import Botica from "../assets/programas/botica.png"
-import ConectandoContigo from "../assets/programas/conectando-contigo.png"
-import CorrienteAlterna from "../assets/programas/corriente-alterna.png"
 import DobleDeMentes from "../assets/programas/doble-de-mentes.png"
-import Experiencia from "../assets/programas/experiencia.png"
-import LucesCamaraCancion from "../assets/programas/luces-camara-cancion.png"
-import RockStar from "../assets/programas/rock-star.png"
 import TalentPlus from "../assets/programas/talent-plus.png"
-import TresConTodo from "../assets/programas/tres-con-todo.png"
 import ZonaGeek from "../assets/programas/zona-geek.png"
+import ComoVaMiami from "../assets/programas/mosca-como-va-miami.png"
+import SoyArmandoFit from "../assets/programas/mosca-soy-armando-fit.png"
+import GoJuanca from "../assets/programas/logo-go-juanca.png"
+import Emprende507 from "../assets/programas/mosca-emprende-305.png"
+import HoyEnBroadcast from "../assets/programas/hoy-en-broadcast.png"
+import PolosOpuestos from "../assets/programas/mosca-polos-opuestos.png"
+import GerenciaParaTodos from "../assets/programas/gerencia-para-todos.png"
+import ExperienciaExtrema from "../assets/programas/experiencia-extrema.png"
+import LiteralmenteHablando from "../assets/programas/literalmente-hablando.png"
+import ElCamerino from "../assets/programas/logo-el-camerino.png"
+import LlegandoProbando from "../assets/programas/llegando-probando.png"
+import QueFlaca from "../assets/programas/que-flaca-tv.png"
 
 const ProgramTable = () => (
   <div className="program-times-table">
     <ul className="times">
       <li className="head">Hora</li>
+      <li>11am - 12pm</li>
       <li>12pm - 1pm</li>
       <li>1pm - 2pm</li>
       <li>2pm - 3pm</li>
@@ -39,52 +43,59 @@ const ProgramTable = () => (
         </thead>
         <tbody>
           <tr>
-            <td><img src={Backstage} alt="Logo"/></td>
+            <td><img src={ComoVaMiami} alt="Logo"/></td> 
             <td></td>
+            <td><img src={HoyEnBroadcast} alt="Logo"/></td>
             <td></td>
+            <td><img src={LlegandoProbando} alt="Logo"/></td>
+          </tr>
+          <tr>
+            <td><img src={Backstage} alt="Logo"/></td> 
+            <td><img src={SoyArmandoFit} alt="Logo"/></td>
             <td></td>
+            <td><img src={GerenciaParaTodos} alt="Logo"/></td>
             <td><img src={TalentPlus} alt="Logo"/></td>
           </tr>
           <tr>
-            <td><img src={Botica} alt="Logo Programa"/></td>
-            <td><img src={Botica} alt="Logo Programa"/></td>
-            <td><img src={Botica} alt="Logo Programa"/></td>
-            <td><img src={Botica} alt="Logo Programa"/></td>
-            <td><img src={Botica} alt="Logo Programa"/></td>
-          </tr>
-          <tr>
-            <td><img src={AsignaturaPendiente} alt="Logo Programa"/></td>
-            <td></td>
-            <td><img src={AsignaturaPendiente} alt="Logo Programa"/></td>
-            <td></td>
-            <td><img src={AsignaturaPendiente} alt="Logo Programa"/></td>
+            <td><img src={Botica} alt="Logo Programa"/></td> 
+            <td></td>    
+            <td><img src={Botica} alt="Logo Programa"/></td> 
+            <td></td>    
+            <td><img src={Botica} alt="Logo Programa"/></td> 
           </tr>
           <tr>
             <td></td>
             <td></td>
             <td></td>
+            <td><img src={ExperienciaExtrema} alt="Logo"/></td>
+            <td><img src={ComoVaMiami} alt="Logo Programa"/></td>
+          </tr>
+          <tr>
             <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><img src={ZonaGeek} alt="Logo Programa"/></td> 
+            <td><img src={GoJuanca} alt="Logo Programa"/></td>
+            <td></td>
+            <td></td> 
             <td><img src={DobleDeMentes} alt="Logo Programa"/></td>
           </tr>
           <tr>
-            <td><img src={ZonaGeek} alt="Logo Programa"/></td>
-            <td><img src={Experiencia} alt="Logo Programa"/></td>
-            <td><img src={ConectandoContigo} alt="Logo Programa"/></td>
-            <td><img src={RockStar} alt="Logo Programa"/></td>
             <td></td>
+            <td><img src={Emprende507} alt="Logo Programa"/></td>
+            <td><img src={PolosOpuestos} alt="Logo Programa"/></td>
+            <td><img src={LiteralmenteHablando} alt="Logo Programa"/></td>
+            <td><img src={QueFlaca} alt="Logo Programa"/></td>
           </tr>
           <tr>
-            <td><img src={TresConTodo} alt="Logo Programa"/></td>
-            <td><img src={TresConTodo} alt="Logo Programa"/></td>
-            <td><img src={TresConTodo} alt="Logo Programa"/></td>
-            <td><img src={TresConTodo} alt="Logo Programa"/></td>
-            <td><img src={TresConTodo} alt="Logo Programa"/></td>
-          </tr>
-          <tr>
-            <td><img src={Agentes305} alt="Logo Programa"/></td>
-            <td><img src={CorrienteAlterna} alt="Logo Programa"/></td>
-            <td><img src={CualquierCosa} alt="Logo Programa"/></td>
-            <td><img src={LucesCamaraCancion} alt="Logo Programa"/></td>
+            <td></td> 
+            <td></td> 
+            <td></td>
+            <td><img src={ElCamerino} alt="Logo Programa"/></td> 
             <td></td>
           </tr>
         </tbody>
