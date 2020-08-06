@@ -1,4 +1,5 @@
 import React from "react"
+import LlegandoAMiami from "../assets/programas/llegando-a-miami.png"
 import Backstage from "../assets/programas/backstage.png"
 import Botica from "../assets/programas/botica.png"
 import DobleDeMentes from "../assets/programas/doble-de-mentes.png"
@@ -43,7 +44,7 @@ const ProgramTable = () => (
         </thead>
         <tbody>
           <tr>
-            <td><img src={ComoVaMiami} alt="Logo"/></td> 
+            <td><img src={LlegandoAMiami} alt="Logo"/></td> 
             <td></td>
             <td><img src={HoyEnBroadcast} alt="Logo"/></td>
             <td></td>
